@@ -96,7 +96,7 @@ export class AuthService {
     return 'permission is granted  ';
   }
   async login(user: any) {
-    const payload = { username: user.username, sub: user.userId };
+    const payload = { username: user.username, sub: user.provider_id };
     return {
       access_token: this.jwtService.sign(payload),
     };

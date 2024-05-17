@@ -152,7 +152,7 @@ export class AuthController {
           STATUS_MSG.ERROR.message,
         );
       }
-      const logged = this.authService.login(user);
+      const logged = await this.authService.login(user);
       return this.responseHandler.sendResponse(
         res,
         HttpStatusCode.NotFound,
